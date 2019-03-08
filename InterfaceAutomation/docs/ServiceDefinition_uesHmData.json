@@ -1,0 +1,37 @@
+{
+  "VersionNum" : "1.0",
+  "RouteInfo" : {
+    "CenterCode" : "ord",
+    "ModuleName" : "ICemUserDataServiceCSV",
+    "ControllerName" : "BusinessController",
+    "ClientAccessUrl" : "/hmDate"
+  },
+  "FunctionList" : [ {
+    "Name" : "查询用户体验热力图列表数据",
+    "Description" : "根据网络技术、业务类型，终端类型，时间节点，当前页码，以及每页条数返回查询用户体验热力图的所有数据，以列表的形式展示。",
+    "Address" : "/uesHmData",
+    "Input" : {
+      "CustomDependency" : "uesHmData/IOData.json",
+      "decl" : {
+        "declType" : {
+          "typeTag" : "class",
+          "Description" : "client post data",
+          "typName" : "FindHMInput"
+        },
+        "declName" : "input"
+      }
+    },
+    "Output" : {
+      "CustomDependency" : "uesHmData/IOData.json",
+      "decl" : {
+        "declType" : {
+          "typeTag" : "class",
+          "Description" : "send back to client",
+          "typName" : "ResultUesHmData"
+        },
+        "declName" : "output"
+      }
+    },
+    "BackedFunctionName" : "findHm"
+  } ]
+}

@@ -1,0 +1,20 @@
+package com.asiainfo.cem.vace.services.interfaces;
+
+import com.ai.aif.csf.common.annotation.Center;
+import com.ai.aif.csf.common.annotation.ServiceAttributes;
+
+import java.text.ParseException;
+import java.util.Map;
+
+#!
+#importInputTypeNameSpace#
+#importOutputTypeNameSpace#
+!#
+
+@Center("#CenterCode#")
+@ServiceAttributes(centerCode = "#CenterCode#")
+public interface #ModuleName# {
+#!
+    #OutputTypeName# #BackedFunctionName#(#InputTypeName# #InputVarName#);
+!#
+}

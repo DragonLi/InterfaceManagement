@@ -1,0 +1,17 @@
+{
+  "NameSpace" : "com.asiainfo.cem.protocol.common",
+  "TypList" : [ {
+    "typeName" : "MapPoint",
+    "fieldTypeList" : [ {
+      "declType" : {
+        "typeTag" : "double"
+      },
+      "declName" : "x"
+    }, {
+      "declType" : {
+        "typeTag" : "double"
+      },
+      "declName" : "y"
+    } ]
+  } ]
+}

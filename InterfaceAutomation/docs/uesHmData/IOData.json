@@ -1,0 +1,115 @@
+{
+  "NameSpace" : "com.asiainfo.cem.protocol.uesHmData",
+  "Dependency" : [ "common/MapPoint.json" ],
+  "TypList" : [ {
+    "typeName" : "FindHMInput",
+    "fieldTypeList" : [ {
+      "declType" : {
+        "typeTag" : "string"
+      },
+      "declName" : "rat",
+      "DefaultValue" : "All"
+    }, {
+      "declType" : {
+        "typeTag" : "string"
+      },
+      "declName" : "deviceType",
+      "DefaultValue" : "All"
+    }, {
+      "declType" : {
+        "typeTag" : "string"
+      },
+      "declName" : "serviceType",
+      "DefaultValue" : "All"
+    }, {
+      "declType" : {
+        "typeTag" : "string"
+      },
+      "declName" : "startTime",
+      "description" : "数据需求的开始日期和时间。如果不传默认是最后一批15分钟的数据开始时间"
+    }, {
+      "declType" : {
+        "typeTag" : "string"
+      },
+      "declName" : "endTime"
+    }, {
+      "declType" : {
+        "typeTag" : "class",
+        "typName" : "MapPoint"
+      },
+      "declName" : "P1"
+    }, {
+      "declType" : {
+        "typeTag" : "class",
+        "typName" : "MapPoint"
+      },
+      "declName" : "P2"
+    }, {
+      "declType" : {
+        "typeTag" : "class",
+        "typName" : "MapPoint"
+      },
+      "declName" : "P3"
+    }, {
+      "declType" : {
+        "typeTag" : "class",
+        "typName" : "MapPoint"
+      },
+      "declName" : "P4"
+    } ]
+  }, {
+    "typeName" : "ResultUesHmData",
+    "fieldTypeList" : [ {
+      "declType" : {
+        "typeTag" : "int"
+      },
+      "declName" : "resultCode"
+    }, {
+      "declType" : {
+        "typeTag" : "string"
+      },
+      "declName" : "resultMessage"
+    }, {
+      "declType" : {
+        "typeTag" : "class",
+        "typName" : "ResultData"
+      },
+      "declName" : "data"
+    } ]
+  }, {
+    "typeName" : "thermodynamic",
+    "fieldTypeList" : [ {
+      "declType" : {
+        "typeTag" : "string"
+      },
+      "declName" : "lng"
+    }, {
+      "declType" : {
+        "typeTag" : "string"
+      },
+      "declName" : "lat"
+    }, {
+      "declType" : {
+        "typeTag" : "int"
+      },
+      "declName" : "score"
+    } ]
+  }, {
+    "typeName" : "ResultData",
+    "fieldTypeList" : [ {
+      "declType" : {
+        "typeTag" : "List<>",
+        "ElementType" : {
+          "typeTag" : "class",
+          "typName" : "thermodynamic"
+        }
+      },
+      "declName" : "thermodynamicChart"
+    }, {
+      "declType" : {
+        "typeTag" : "string"
+      },
+      "declName" : "dateEndTime"
+    } ]
+  } ]
+}

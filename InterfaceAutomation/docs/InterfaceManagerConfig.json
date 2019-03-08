@@ -1,0 +1,9 @@
+{
+  "serviceInterfaceFile" : "docs/ServiceDefinition_uesHmData.json",
+  "serviceRouterTemplate" : "docs/ServiceRouter.template",
+  "microServiceInterfaceTemplate" : "docs/MicroServiceInterface.template",
+  "generationRootPath" : "docs/test",
+  "routerNameSpace" : "com.asiainfo.cem.controller",
+  "microServiceNameSpace" : "com.asiainfo.cem.vace.services.interfaces",
+  "jsTemplate" : "docs/JsInterface.template"
+}

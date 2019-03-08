@@ -1,0 +1,46 @@
+package com.asiainfo.cem.controller;
+
+import com.ai.aif.csf.client.service.factory.CsfServiceFactory;
+import com.ai.aif.csf.client.service.interfaces.IClientSV;
+import com.ai.aif.csf.common.exception.CsfException;
+
+import com.asiainfo.cem.common.Constants;
+import com.google.common.collect.Maps;
+import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.StringUtils;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
+import java.util.Map;
+
+#!
+#importInputTypeNameSpace#
+#importOutputTypeNameSpace#
+!#
+
+@Controller
+@RequestMapping("#ClientAccessUrl#")
+public class #ControllerName# {
+#!
+    @PostMapping("#Address#")
+    @ResponseBody
+    public #OutputTypeName# #BackedFunctionName#(@RequestBody #InputTypeName# #InputVarName#) {
+        #OutputTypeName# remoteResult=null;
+        try {
+            IClientSV client = CsfServiceFactory.getService(
+                "#CenterCode#_#ModuleName#_#BackedFunctionName#");
+            Map clientParam=Maps.newHashMap();
+            clientParam.put("clientParam",#InputVarName#);
+            remoteResult = (#OutputTypeName#) client.service(clientParam);
+        } catch (Exception e) {
+            log.error("#Name#错误", e);
+            //TODO if debug return stack trace of the exception else use predefined error message to avoid information leakage
+            remoteResult=new #OutputTypeName#();
+            remoteResult.resultCode=99999;
+            remoteResult.resultMessage=Constants.errorMessage;
+        }
+        return remoteResult;
+    }
+!#
+}

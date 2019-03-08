@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>typemodel.Parameter</OriginalElement>
+  <nodes>
+    <node x="3.0" y="333.5">typemodel.PrimitiveTypeDecl</node>
+    <node x="-14.0" y="-14.0">typemodel.VarDecl</node>
+    <node x="691.0" y="490.5">typemodel.ListTypeDecl</node>
+    <node x="883.0" y="312.0">typemodel.RecordTypeDecl</node>
+    <node x="352.0" y="312.0">typemodel.TypeDecl</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="typemodel.PrimitiveTypeDecl" target="typemodel.TypeDecl">
+      <point x="117.0" y="-0.0" />
+      <point x="-128.0" y="-0.0" />
+    </edge>
+    <edge source="typemodel.VarDecl" target="typemodel.TypeDecl">
+      <point x="134.0" y="-0.0" />
+      <point x="480.0" y="120.0" />
+      <point x="0.0" y="-48.0" />
+    </edge>
+    <edge source="typemodel.ListTypeDecl" target="typemodel.TypeDecl">
+      <point x="-149.0" y="-0.0" />
+      <point x="480.0" y="560.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+    <edge source="typemodel.VarDecl" target="typemodel.PrimitiveTypeDecl">
+      <point x="0.0" y="134.0" />
+      <point x="0.0" y="-26.5" />
+    </edge>
+    <edge source="typemodel.RecordTypeDecl" target="typemodel.TypeDecl">
+      <point x="-117.0" y="-0.0" />
+      <point x="128.0" y="-0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.904093567251462" x="678.0" y="394.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

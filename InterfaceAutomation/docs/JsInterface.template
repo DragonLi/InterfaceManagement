@@ -1,0 +1,33 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable camelcase */
+
+// import http from './/src/http.js'
+// import services from './/src/conf/services.js'
+
+import http from '../../../../http.js'
+import services from '../../../../conf/services.js'
+
+// auto generated
+export default {
+#!separator:,!
+  request_#BackedFunctionName#: function (
+    serviceRegon,
+#InputTypeFieldList! #FieldName#,
+!InputTypeFieldList# onSuccess, onError) {
+    http[serviceRegon]
+      .post(services.thermodynamicChart.UES_HM_DATA, {
+#InputTypeFieldList!separator:,! #FieldName#:#FieldName#
+!InputTypeFieldList# })
+      .then(({ data }) => {
+        console.log(data)
+        if (data.resultCode === 0) {
+          console.log(data)
+          onSuccess(data)
+        }
+      })
+      .catch(e => {
+        console.log(e)
+      })
+  }
+!#
+}
